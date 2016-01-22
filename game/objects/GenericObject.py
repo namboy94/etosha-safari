@@ -36,12 +36,4 @@ class GenericObject(object):
             newY = int(oriY / ratio)
             newImage = pygame.transform.scale(image, (newX, newY))
 
-            print(x)
-            print(y)
-            print(oriX)
-            print(oriY)
-            print(ratio)
-            print(newX)
-            print(newY)
-
         return newImage
