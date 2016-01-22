@@ -1,5 +1,6 @@
 import sys
 import pygame
+import vlc
 from pygame.locals import *
 from ui.MouseCursor import MouseCursor
 from objects.Car import Car
@@ -38,6 +39,10 @@ mainCar = Car("../resources/sprites/safaricar.png", screen)
 
 pygame.display.flip()
 pygame.display.set_caption('Etosha Safari')
+
+p = vlc.MediaPlayer('../resources/sounds/bgmusic.mp3')
+p.play()
+
 
 while True:
 
