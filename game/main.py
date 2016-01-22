@@ -13,7 +13,8 @@ from objects.animals.Lion import Lion
 #properties
 size = width, height = 1920, 1080
 bgColor = 255, 255, 0
-speed = 10
+speed = 0
+accelCount = -1
 
 pygame.init()
 
@@ -43,6 +44,11 @@ pygame.display.set_caption('Etosha Safari')
 p = vlc.MediaPlayer('../resources/sounds/bgmusic.mp3')
 p.play()
 
+tacho0 = pygame.transform.scale(pygame.image.load("../resources/ui/tacho0.png").convert_alpha(), (250, 250))
+tacho05 = pygame.transform.scale(pygame.image.load("../resources/ui/tacho05.png").convert_alpha(), (250, 250))
+tacho1 = pygame.transform.scale(pygame.image.load("../resources/ui/tacho1.png").convert_alpha(), (250, 250))
+
+currentTacho = tacho0
 
 while True:
 
@@ -64,14 +70,24 @@ while True:
         pygame.display.toggle_fullscreen()
 
     if pygame.key.get_pressed()[pygame.K_RIGHT]:
+        if speed < 26: accelCount += 1
+        if accelCount % 5 == 0: speed += 1; accelCount = -1
         back.move(speed)
         mainCar.draw()
+    else:
+        if speed > 0:
+            speed -= 1
+
+    if speed < 10: currentTacho = tacho0
+    elif speed < 18: currentTacho = tacho05
+    elif speed > 18: currentTacho = tacho1
 
     back.draw()
 
     text = font.render(str(score), 1, (10, 10, 10))
     textRect = text.get_rect()
     screen.blit(text, textRect)
+    screen.blit(currentTacho, (1600, 50))
 
     mainCar.draw()
     back.drawAnimals()
