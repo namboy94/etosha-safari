@@ -6,7 +6,7 @@ stages:
 github_mirror:
   stage: mirror
   tags:
-    - linux-buildserver
+    - github_namboy94_push
   script:
     - git checkout master
     - git pull
@@ -18,7 +18,7 @@ gitstats:
     - master
     - develop
   tags:
-    - linux-buildserver
+    - gitstats
   script:
     - gitstats . gitstats
     - rsync -av gitstats/ /var/www/gitstats.namibsun.net/public_html/gitstats/etosha-safari --delete-before
@@ -29,7 +29,7 @@ update_html_pages:
   stage: finalize
   when: always
   tags:
-    - linux-buildserver
+    - gitstats
   script:
     - git clone https://gitlab.namibsun.net/namboy94/html-index-generator.git
     - cd html-index-generator
