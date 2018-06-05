@@ -1,4 +1,6 @@
-# Etosha Safari [![pipeline status](https://gitlab.namibsun.net/namboy94/etosha-safari/badges/master/pipeline.svg)](https://gitlab.namibsun.net/namboy94/etosha-safari/commits/master)
+# Etosha Safari
+
+[![pipeline status](https://gitlab.namibsun.net/namibsun/museum/etosha-safari/badges/master/pipeline.svg)](https://gitlab.namibsun.net/namibsun/museum/etosha-safari/commits/master)
 
 ![Logo](resources/logo/logo-readme.png)
 
@@ -11,9 +13,8 @@ I'm not even comfortable calling it a game in its current state.
 
 ## Further Information
 
-* [Changelog](https://gitlab.namibsun.net/namboy94/etosha-safari/raw/master/CHANGELOG)
-* [License (GPLv3)](https://gitlab.namibsun.net/namboy94/etosha-safari/raw/master/LICENSE)
-* [Gitlab](https://gitlab.namibsun.net/namboy94/etosha-safari)
+* [Changelog](CHANGELOG)
+* [License](LICENSE)
+* [Gitlab](https://gitlab.namibsun.net/namibsun/museum/etosha-safari)]
 * [Github](https://github.com/namboy94/etosha-safari)
-* [Git Statistics (gitstats)](https://gitstats.namibsun.net/gitstats/etosha-safari/index.html)
-* [Git Statistics (git_stats)](https://gitstats.namibsun.net/git_stats/etosha-safari/index.html)
+* [Progstats](https://progstats.namibsun.net/projects/etosha-safari)
